@@ -10,34 +10,23 @@
     <title>Book Library</title>
 </head>
 <body>
+
+    <button id="new-book-btn">New Book</button>
+    <form id="add-book-form" style="display: none;">
+    <label for="title">Title</label>
+    <input type="text" id="title" placeholder="Enter book title">
+
+    <label for="author">Author</label>
+    <input type="text" id="author" placeholder="Enter the Author">
+
+    <label for="pages">Pages</label>
+    <input type="number" id="pages" placeholder="How many pages?">
+
+    <label for="read">Read?</label>
+    <input type="radio" id="read">
     
-<main id="main-box">
-
-    <div id="box-module">
-
-    <h1>Book Library</h1>
-    <form onsubmit="return Book()">
-
-    <input class="input-box" placeholder="Enter a book title" type="text" id="title">
-    <input class="input-box" placeholder="Enter book Author" type="text" id="author">
-    <button id="add-book" type="submit" value="submit">NEW BOOK</button>
-    
+    <button id="submit-btn" type="submit" value="submit">Add Book</button>
     </form>
 
-    <ul id="library-books">
-     
-        <li>
-
-        </li>
-
-
-    </ul>
-
-
-    </div>
-
-
-
-</main>
 </body>
 </html>

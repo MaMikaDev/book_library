@@ -1,0 +1,8 @@
+#new-book-btn {
+    display: block;
+    padding: 1rem;
+    color: yellow;
+    background-color: black;
+    border-radius: 1rem;
+    font-size: 20px;
+}
