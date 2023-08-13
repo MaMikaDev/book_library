@@ -26,6 +26,7 @@ function render(){
     <div class="card-body">
     <p>${book.pages} pages</p>
     <p class="read-status">${book.read ? "Read" : "Not Read Yet"}</p>
+    <button class="toggle-read-button" onclick="toggleRead(${i})">Toggle read</button>
     <button class="remove-button" onclick="removeBook(${i})">Remove Book</button>
     </div>`;
     libraryBook.appendChild(bookElement);
@@ -34,6 +35,11 @@ function render(){
 
 function removeBook(index) {
   myLibrary.splice(index, 1);
+  render();
+}
+
+function toggleRead(index) {
+  myLibrary[index].toggleRead();
   render();
 }
 
