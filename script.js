@@ -10,6 +10,26 @@ function Book(title, author, pages, read) {
 
 }
 
+function render(){
+  let libraryBook = document.querySelector("#library");
+  libraryBook.innerHTML = "";
+  for (let i = 0; i < myLibrary.length; i++) {
+    let book = myLibrary[i];
+    let bookElement = document.createElement("div");
+    bookElement.setAttribute("class", "book-card");
+    bookElement.innerHTML = `
+    <div class="card-header">
+      <h3 class="book-title">${book.title}</h3>
+      <h4 class="book-author">by ${book.author}</h4>
+    </div>
+    <div class="card-body">
+    <p>${book.pages} pages</p>
+    <p class="read-status">${book.read ? "Read" : "Not Read Yet"}</p>
+    </div>`;
+    libraryBook.appendChild(bookElement);
+  }
+}
+
 function addBookToLibrary() {
 
   let title = document.querySelector('#title').value;
@@ -18,10 +38,10 @@ function addBookToLibrary() {
   let read = document.querySelector('#read').checked; //as it's for a radio button
 
   let newBook = new Book(title, author, pages, read);
-  console.log(newBook);
+  myLibrary.push(newBook); //adds book to the array
+  render();
 
 }
-
 
 
 let newBookbtn = document.querySelector("#new-book-btn");
@@ -33,12 +53,13 @@ newBookbtn.addEventListener("click", function() {
 
 })
 
-document.querySelector("#add-book-form").addEventListener("submit", function () {
-  event.preventDefault(); //prevents default
+document.querySelector("#add-book-form").addEventListener("submit", function(event) {
+  event.preventDefault(); //prevents default as there is no back-end to send anything to
 
   addBookToLibrary(); //calls the function
-  
+
   alert("Book Added!");
 
+  console.log(myLibrary);
 
 })
