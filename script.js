@@ -10,6 +10,7 @@ function Book(title, author, pages, read) {
 
 }
 
+
 function render(){
   let libraryBook = document.querySelector("#library");
   libraryBook.innerHTML = "";
@@ -25,9 +26,15 @@ function render(){
     <div class="card-body">
     <p>${book.pages} pages</p>
     <p class="read-status">${book.read ? "Read" : "Not Read Yet"}</p>
+    <button class="remove-button" onclick="removeBook(${i})">Remove Book</button>
     </div>`;
     libraryBook.appendChild(bookElement);
   }
+}
+
+function removeBook(index) {
+  myLibrary.splice(index, 1);
+  render();
 }
 
 function addBookToLibrary() {
