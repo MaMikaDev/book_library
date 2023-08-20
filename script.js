@@ -26,9 +26,10 @@ function render(){
     <div class="card-body">
     <p>${book.pages} pages</p>
     <p class="read-status">${book.read ? "Read" : "Not Read Yet"}</p>
+    <div class="card-btns">
     <button class="toggle-read-button" onclick="toggleRead(${i})">Toggle read</button>
     <button class="remove-button" onclick="removeBook(${i})">Remove Book</button>
-    </div>`;
+    </div></div>`;
     libraryBook.appendChild(bookElement);
   }
 }
