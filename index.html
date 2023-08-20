@@ -11,23 +11,38 @@
 </head>
 <body>
 
-    <button id="new-book-btn">New Book</button>
-    <form id="add-book-form" style="display: none;">
-    <label for="title">Title</label>
-    <input type="text" id="title" placeholder="Enter book title">
-
-    <label for="author">Author</label>
-    <input type="text" id="author" placeholder="Enter the Author">
-
-    <label for="pages">Pages</label>
-    <input type="number" id="pages" placeholder="How many pages?">
-
-    <label for="read">Read?</label>
-    <input type="radio" id="read">
     
-    <button id="submit-btn" type="submit" value="submit">Add Book</button>
-    </form>
+    <button id="new-book-btn">New Book</button>
+
+    <fieldset>
+    
+        
+    <form id="add-book-form" style="display: none;">
+        <div class="form-row">
+    <label for="title">Title</label>
+    <input type="text" id="title" placeholder="Enter book title" class="input-box">
+        </div>
+    <div class="form-row">
+    <label for="author">Author</label>
+    <input type="text" id="author" placeholder="Enter the Author" class="input-box">
+    </div>
+    <div class="form-row">
+    <label for="pages">Pages</label>
+    <input type="number" id="pages" placeholder="How many pages?" class="input-box">
+    </div>
+    <div class="form-row">
+    <label for="read">Read?</label>
+    
+  
+    <input type="checkbox" id="read">
+</div>
+    <div class="form-row">
+    <button id="submit-btn" type="submit" value="submit">Add</button>
+</div>
+</form>
+
     <div id="library"></div>
+    </fieldset>
 
 </body>
 </html>

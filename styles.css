@@ -1,8 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Martian+Mono:wght@100;200;300;400;500;600;700;800&display=swap");
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+    font-family: "Martian Mono", monospace;
+    font-size: 12px;
+    display: grid;
+}
+
+
+
+/* no visible scroll-bar */
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+
 #new-book-btn {
     display: block;
+    justify-self: center;
+    align-self: center;
     padding: 1rem;
-    color: yellow;
+    margin: 1rem;
+    max-width: 450px;
+    color: rgb(239, 239, 99);
     background-color: black;
     border-radius: 1rem;
     font-size: 20px;
+    box-shadow: 1px 2px 2.5px rgb(58, 69, 56);
+    border-color: white;
+}
+
+#new-book-btn:hover {
+    color: black;
+    background-color: rgb(239, 239, 99);
+
+  }
+
+fieldset {
+
+    border: none;
+    min-width: fit-content;
+
+  }
+
+/* so that it looks decent on all screens */
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .input-box {
+    margin: 1px;
+    width: 80%;
+  }
+
+  #read {
+
+    height: 1rem;
+    width: 1rem;
+    background-color: aqua;
+    justify-items: center;
+    align-items: center;
+  }
+
+#submit-btn {
+    display: block;
+    padding: 0.3rem;
+    margin: 2px auto;
+    color: rgb(239, 239, 99);
+    background-color: black;
+    border-radius: 1.2rem;
+    box-shadow: 1px 2px 2.5px rgb(58, 69, 56);
+    border-color: white;
 }
