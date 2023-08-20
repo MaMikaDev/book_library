@@ -39,6 +39,10 @@ function removeBook(index) {
   render();
 }
 
+Book.prototype.toggleRead = function() {
+  this.read = !this.read;
+}
+
 function toggleRead(index) {
   myLibrary[index].toggleRead();
   render();
