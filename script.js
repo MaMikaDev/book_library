@@ -1,19 +1,23 @@
 let myLibrary = [];
 
-//initialising a book
-function Book(title, author, pages, read) {
+//initialising class Book by the use of classess
+Class Book{
+  
+  constructor(title, author, pages, read) {
 
   this.title = title;
   this.author = author;
   this.pages = pages;
   this.read = read;
 
-}
+  }
 
+  //method to render the existing library
+  render() {
 
-function render(){
-  let libraryBook = document.querySelector("#library");
-  libraryBook.innerHTML = "";
+    let libraryBook = document.querySelector("#library");
+    libraryBook.innerHTML = "";
+
   for (let i = 0; i < myLibrary.length; i++) {
     let book = myLibrary[i];
     let bookElement = document.createElement("div");
@@ -31,10 +35,10 @@ function render(){
     <button class="remove-button" onclick="removeBook(${i})">Remove Book</button>
     </div></div>`;
     libraryBook.appendChild(bookElement);
-  }
+   }
 }
 
-function removeBook(index) {
+removeBook(index) {
   myLibrary.splice(index, 1);
   render();
 }
@@ -48,7 +52,7 @@ function toggleRead(index) {
   render();
 }
 
-function addBookToLibrary() {
+addBookToLibrary() {
 
   let title = document.querySelector('#title').value;
   let author = document.querySelector('#author').value;
@@ -81,3 +85,5 @@ document.querySelector("#add-book-form").addEventListener("submit", function(eve
   console.log(myLibrary);
 
 })
+
+}
