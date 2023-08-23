@@ -85,4 +85,6 @@ class Book {
          });
        }
   )}
+
+  Book();
 }
