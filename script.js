@@ -2,25 +2,21 @@ let myLibrary = [];
 
 //initialising class Book by the use of classess
 class Book {
-
-
-
   constructor(title, author, pages, read) {
-
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
   }
 
   //method to remove the book from the existing library
-  removeBook(index){
+  removeBook(index) {
     myLibrary.splice(index, 1);
     render();
-    }
+  }
 
   //method to render the existing library
-  render(){
+  render() {
     let libraryBook = document.querySelector("#library");
     libraryBook.innerHTML = "";
     for (let i = 0; i < myLibrary.length; i++) {
@@ -43,7 +39,7 @@ class Book {
     }
   }
 
-  //toggle the book read or not  
+  //toggle the book read or not
   toggleRead(index) {
     this.read = !this.read;
     myLibrary[index].toggleRead();
@@ -52,43 +48,35 @@ class Book {
 
   //add book to the library
   addBookToLibrary() {
+    let title = document.querySelector("#title").value;
+    let author = document.querySelector("#author").value;
+    let pages = document.querySelector("#pages").value;
+    let read = document.querySelector("#read").checked; //as it's for a radio button
 
-    let title = document.querySelector('#title').value;
-    let author = document.querySelector('#author').value;
-    let pages = document.querySelector('#pages').value;
-    let read = document.querySelector('#read').checked; //as it's for a radio button
-  
     let newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook); //adds book to the array
     render();
-  
-  
+
     //query selector for a button
     newBookbtn = document.querySelector("#new-book-btn");
 
-    newBookbtn.addEventListener("click", function() {
-    newBookForm = document.querySelector("#add-book-form");
-    console.log(newBookForm);
-    newBookForm.style.display = "block";
+    newBookbtn.addEventListener("click", function () {
+      newBookForm = document.querySelector("#add-book-form");
+      console.log(newBookForm);
+      newBookForm.style.display = "block";
 
-})
+      document
+        .querySelector("#add-book-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); //prevents default as there is no back-end to send anything to
+        });
 
-}
+      //call the add book to library method
+      addBookToLibrary();
 
+      alert("Book Added!");
 
-
-document.querySelector("#add-book-form").addEventListener("submit", function(event) {
-  event.preventDefault(); //prevents default as there is no back-end to send anything to
-
-  addBookToLibrary(); //calls the function
-
-  alert("Book Added!");
-
-  console.log(myLibrary);
-
-})
-
-
-
-
+      console.log(myLibrary);
+    });
+  }
 }
