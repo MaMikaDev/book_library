@@ -1,5 +1,7 @@
 let myLibrary = [];
 
+let newBookbtn = document.querySelector("#new-book-btn");
+
 //initialising class Book by the use of classess
 class Book {
   constructor(title, author, pages, read) {
@@ -58,7 +60,7 @@ class Book {
     render();
 
     //query selector for a button
-    newBookbtn = document.querySelector("#new-book-btn");
+    // newBookbtn = document.querySelector("#new-book-btn");
 
     newBookbtn.addEventListener("click", function () {
       newBookForm = document.querySelector("#add-book-form");
