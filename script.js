@@ -99,6 +99,7 @@ class Book {
 
 }
 
+new Book();
 new Book().openForm();
 
 
