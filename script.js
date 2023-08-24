@@ -58,17 +58,14 @@ class Book {
     myLibrary.push(newBook); //adds book to the array
     render();
 
-    //query selector for a button
-
-  };
-
-  addBookToLibrary();
-
-  alert("Book Added!");
+    alert("Book Added!");
 
     console.log(myLibrary);
 
-  newBookbtn = document.querySelector("#new-book-btn");
+  };
+
+
+   newBookbtn = document.querySelector("#new-book-btn");
  
     newBookbtn.addEventListener("click", function() {
     newBookForm = document.querySelector("#add-book-form");
