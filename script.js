@@ -90,6 +90,16 @@ class Book {
 //   newBookForm.style.display = "block";
 
 // })
+// document.querySelector("#add-book-form").addEventListener("submit", function(event) {
+//   event.preventDefault(); //prevents default as there is no back-end to send anything to
+
+//   addBookToLibrary(); //calls the function
+
+//   alert("Book Added!");
+
+//   console.log(myLibrary);
+
+// })
 
       document.querySelector("#add-book-form").addEventListener("submit", function (event) {
         //prevents default as there is no back-end to send anything to
@@ -100,8 +110,6 @@ class Book {
     }
 
   }
-
-}
 
 
 
