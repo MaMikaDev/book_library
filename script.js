@@ -56,7 +56,7 @@ class Book {
 
     let newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook); //adds book to the array
-    render();
+    this.render();
 
     alert("Book Added!");
 
@@ -76,16 +76,10 @@ class Book {
       event.preventDefault(); //prevents default as there is no back-end to send anything to
       alert('huh huh huuuh')
       this.addBookToLibrary();
+      alert("Book Added!");
       console.log(myLibrary);
 
     })
-
-
-    // addBookToLibrary(); //calls the function
-
-    // alert("Book Added!");
-
-    // console.log(myLibrary);
 
 
   }
