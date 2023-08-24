@@ -95,6 +95,7 @@ class Book {
 const submitButton = document.querySelector('#submit-btn');
 const addNewBook = document.querySelector('#new-book-btn');
 
+new Book();
 new Book().removeBook();
 new Book().addBookToLibrary();
 new Book().openForm();
