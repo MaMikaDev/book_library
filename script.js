@@ -89,6 +89,6 @@ const submitButton = document.querySelector('#submit-btn');
 const addNewBook = document.querySelector('#new-book-btn');
 let myLibrary = [];
 
-new Book();
+new Book().openForm();
 
 
