@@ -88,5 +88,6 @@ class Book {
 
   }}
 
-  new Book();
-// new Book().newBook();
+
+new Book().newBook();
+new Book().submitBook();
