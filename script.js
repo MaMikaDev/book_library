@@ -10,12 +10,11 @@ class Book {
     this.author = author;
     this.pages = pages;
     this.read = read;
-    this.openForm();
   }
-
+  
   myLibrary = [];
-
   submitButton = document.querySelector('#submit-btn');
+  addNewBook = document.querySelector('#new-book-btn');
 
   //method to remove the book from the existing library
   removeBook(index) {
@@ -56,6 +55,9 @@ class Book {
 
   //add book to the library
   addBookToLibrary() {
+
+
+
     let title = document.querySelector("#title").value;
     let author = document.querySelector("#author").value;
     let pages = document.querySelector("#pages").value;
@@ -73,10 +75,21 @@ class Book {
 
   openForm() {
 
-      document.getElementById("#new-book-btn").onclick = event => {
+    this.addNewBook.document.addEventListener('click', function(){
+      alert('openForm is being read.')
 
-      let newBookForm = document.querySelector("#add-book-form");
-      newBookForm.style.display = "block";
+    })
+
+
+
+//     let newBookbtn = document.querySelector("#new-book-btn");
+
+// newBookbtn.addEventListener("click", function() {
+//   let newBookForm = document.querySelector("#add-book-form");
+//   console.log(newBookForm);
+//   newBookForm.style.display = "block";
+
+// })
 
       document.querySelector("#add-book-form").addEventListener("submit", function (event) {
         //prevents default as there is no back-end to send anything to
@@ -92,4 +105,3 @@ class Book {
 
 
 
-new Book();
