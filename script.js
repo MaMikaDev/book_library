@@ -9,6 +9,12 @@ class Book {
     this.author = author;
     this.pages = pages;
     this.read = read;
+    this.addBookToLibrary();
+    this.render();
+    this.addNewBook();
+    this.removeBook();
+    this.toggleRead();
+    this.openForm();
   }
 
   myLibrary = [];
@@ -55,8 +61,6 @@ class Book {
   //add book to the library
   addBookToLibrary() {
 
-
-
     let title = document.querySelector("#title").value;
     let author = document.querySelector("#author").value;
     let pages = document.querySelector("#pages").value;
@@ -83,6 +87,7 @@ class Book {
     document.querySelector("#add-book-form").addEventListener("submit", function (event) {
       event.preventDefault(); //prevents default as there is no back-end to send anything to
       alert('huh huh huuuh')
+      this.addBookToLibrary();
       console.log(myLibrary);
 
     })
@@ -100,6 +105,6 @@ class Book {
 }
 
 new Book();
-new Book().openForm();
+// new Book().openForm();
 
 
