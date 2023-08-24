@@ -1,4 +1,5 @@
 
+
 //initialising class Book by the use of classess
 class Book {
 
@@ -81,14 +82,17 @@ class Book {
     })
     document.querySelector("#add-book-form").addEventListener("submit", function (event) {
       event.preventDefault(); //prevents default as there is no back-end to send anything to
-
-      addBookToLibrary(); //calls the function
-
-      alert("Book Added!");
-
-      console.log(myLibrary);
+      alert('huh huh huuuh')
 
     })
+
+
+    // addBookToLibrary(); //calls the function
+
+    // alert("Book Added!");
+
+    // console.log(myLibrary);
+
 
   }
 
