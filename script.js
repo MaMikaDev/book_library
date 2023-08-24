@@ -83,6 +83,7 @@ class Book {
     document.querySelector("#add-book-form").addEventListener("submit", function (event) {
       event.preventDefault(); //prevents default as there is no back-end to send anything to
       alert('huh huh huuuh')
+      console.log(myLibrary);
 
     })
 
