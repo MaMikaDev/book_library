@@ -89,6 +89,6 @@ class Book {
   
 
   // }}
-
+}}
 
 new Book().newBook();
