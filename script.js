@@ -63,20 +63,20 @@ class Book {
 
   };
 
-  newBook(){
-
+  buttonPress(){
+    newBookbtn = document.querySelector("#new-book-btn");
     newBookbtn.addEventListener("click", function() {
-        newBookForm = document.querySelector("#add-book-form");
-        console.log(newBookForm);
-        newBookForm.style.display = "block";
+      newBookForm = document.querySelector("#add-book-form");
+      console.log(newBookForm);
+      newBookForm.style.display = "block";
 
-    document.querySelector("#add-book-form").addEventListener("submit", function (event) {
-      event.preventDefault(); //prevents default as there is no back-end to send anything to
-    });
-  }
-  )
+      document.querySelector("#add-book-form").addEventListener("submit", function(event) {
+          event.preventDefault();
+          //prevents default as there is no back-end to send anything to
+      });
+  })
   }
 
 }
 
-const newBookbtn = document.querySelector("#new-book-btn");
+new Book().buttonPress();
