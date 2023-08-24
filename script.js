@@ -6,7 +6,7 @@ class Book {
     this.author = author;
     this.pages = pages;
     this.read = read;
-    this.myLibrary = [];
+
   }
 
   //method to remove the book from the existing library
@@ -94,6 +94,7 @@ class Book {
 
 const submitButton = document.querySelector('#submit-btn');
 const addNewBook = document.querySelector('#new-book-btn');
+let myLibrary = [];
 
 new Book();
 new Book().removeBook();
