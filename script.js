@@ -52,15 +52,12 @@ class Book {
     let title = document.querySelector("#title").value;
     let author = document.querySelector("#author").value;
     let pages = document.querySelector("#pages").value;
-    let read = document.querySelector("#read").checked; //as it's for a radio button
+    let read = document.querySelector("#read").checked; //as it's for a check button
 
     let newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook); //adds book to the array
     aBook.render();
-
-    alert("Book Added!");
-
-    console.log(myLibrary);
+    alert("rendered?")
 
   };
 
@@ -68,11 +65,8 @@ class Book {
 
       document.querySelector("#add-book-form").addEventListener("submit", function (event) {
       event.preventDefault(); //prevents default as there is no back-end to send anything to
-      alert('huh huh huuuh');
-
       aBook.addBookToLibrary();
       alert("Book Added!");
-      console.log(myLibrary);
 
     })
 
