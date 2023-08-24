@@ -1,4 +1,6 @@
 let myLibrary = [];
+const newBookbtn = document.querySelector("#new-book-btn");
+const submitButton = document.querySelector('#submit-btn');
 
 //initialising class Book by the use of classess
 class Book {
@@ -63,9 +65,8 @@ class Book {
 
   };
 
+
   newBook() {
-    let newBookbtn = document.querySelector("#new-book-btn");
-    let submitButton = document.querySelector('#submit-btn');
 
     newBookbtn.addEventListener("click", function () {
       let newBookForm = document.querySelector("#add-book-form");
@@ -76,15 +77,15 @@ class Book {
         //prevents default as there is no back-end to send anything to
         event.preventDefault();
         alert("HELLO?!")
+        addBookToLibrary();
         
       });
 
     })
     
 
-    addBookToLibrary();
+    
   }
 
 }
 
-new Book().newBook();
