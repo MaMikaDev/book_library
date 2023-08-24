@@ -1,9 +1,8 @@
 
-
-
-
 //initialising class Book by the use of classess
 class Book {
+
+  openForm();
 
   constructor(title, author, pages, read) {
     this.title = title;
@@ -11,7 +10,7 @@ class Book {
     this.pages = pages;
     this.read = read;
   }
-  
+
   myLibrary = [];
   submitButton = document.querySelector('#submit-btn');
   addNewBook = document.querySelector('#new-book-btn');
@@ -75,41 +74,27 @@ class Book {
 
   openForm() {
 
-    this.addNewBook.document.addEventListener('click', function(){
-      alert('openForm is being read.')
+    this.addNewBook.addEventListener("click", function () {
+      let newBookForm = document.querySelector("#add-book-form");
+      console.log(newBookForm);
+      newBookForm.style.display = "block";
+
+    })
+    document.querySelector("#add-book-form").addEventListener("submit", function (event) {
+      event.preventDefault(); //prevents default as there is no back-end to send anything to
+
+      addBookToLibrary(); //calls the function
+
+      alert("Book Added!");
+
+      console.log(myLibrary);
 
     })
 
-
-
-//     let newBookbtn = document.querySelector("#new-book-btn");
-
-// newBookbtn.addEventListener("click", function() {
-//   let newBookForm = document.querySelector("#add-book-form");
-//   console.log(newBookForm);
-//   newBookForm.style.display = "block";
-
-// })
-// document.querySelector("#add-book-form").addEventListener("submit", function(event) {
-//   event.preventDefault(); //prevents default as there is no back-end to send anything to
-
-//   addBookToLibrary(); //calls the function
-
-//   alert("Book Added!");
-
-//   console.log(myLibrary);
-
-// })
-
-      document.querySelector("#add-book-form").addEventListener("submit", function (event) {
-        //prevents default as there is no back-end to send anything to
-        event.preventDefault();
-        alert("this is within openForm method, so what ")
-
-      })
-    }
-
   }
 
+}
+
+new Book();
 
 
