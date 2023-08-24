@@ -63,7 +63,7 @@ class Book {
 
   };
 
-  buttonPress(){
+  newBook(){
     let newBookbtn = document.querySelector("#new-book-btn");
     newBookbtn.addEventListener("click", function() {
       let newBookForm = document.querySelector("#add-book-form");
@@ -75,8 +75,16 @@ class Book {
           //prevents default as there is no back-end to send anything to
       });
   })
+    submitBook();
+  }
+
+  submitBook(){
+    let submitButton = document.querySelector('#submit-btn');
+    submitButton.addEventListener("click", function() {
+      addBookToLibrary();
+    }
   }
 
 }
 
-new Book().buttonPress();
+new Book().newBook();
