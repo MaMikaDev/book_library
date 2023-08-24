@@ -12,6 +12,7 @@ class Book {
   //method to remove the book from the existing library
   removeBook(index) {
     myLibrary.splice(index, 1);
+    alert('Book has been removed!');
     aBook.render();
   }
 
@@ -39,10 +40,6 @@ class Book {
     }
   }
 
-  // Book.prototype.toggleRead = function() {
-  //   this.read = !this.read;
-  // }
-
   //toggle the book read or not added ? to avoid undefined error when toggling the status
   toggleRead(index) {
     this.read = !this.read;
@@ -64,6 +61,7 @@ class Book {
 
   };
 
+  //creates form to enter the book details
   openForm() {
 
       document.querySelector("#add-book-form").addEventListener("submit", function (event) {
@@ -79,12 +77,13 @@ class Book {
 
 }
 
+//initialising the two main buttons & library
 const submitButton = document.querySelector('#submit-btn');
 const addNewBook = document.querySelector('#new-book-btn');
 
-
 let myLibrary = [];
 
+//listener for the first click of a button
 addNewBook.addEventListener("click", function () {
   let newBookForm = document.querySelector("#add-book-form");
   console.log(newBookForm);
