@@ -65,6 +65,8 @@ class Book {
 
   newBook() {
     let newBookbtn = document.querySelector("#new-book-btn");
+    let submitButton = document.querySelector('#submit-btn');
+
     newBookbtn.addEventListener("click", function () {
       let newBookForm = document.querySelector("#add-book-form");
       console.log(newBookForm);
@@ -74,20 +76,19 @@ class Book {
         event.preventDefault();
         //prevents default as there is no back-end to send anything to
       });
+
+      submitButton.addEventListener("click", function () {
+        addBookToLibrary();
+      })
     })
-    submitBook();
+    
   }
 
-  submitBook() {
-
-    let submitButton = document.querySelector('#submit-btn');
+  // submitBook() {
   
-    submitButton.addEventListener("click", function () {
-      addBookToLibrary();
-    })
+  
 
-  }}
+  // }}
 
 
 new Book().newBook();
-new Book().submitBook();
