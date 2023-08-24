@@ -9,12 +9,6 @@ class Book {
     this.author = author;
     this.pages = pages;
     this.read = read;
-    this.addBookToLibrary();
-    this.render();
-    this.addNewBook();
-    this.removeBook();
-    this.toggleRead();
-    this.openForm();
   }
 
   myLibrary = [];
@@ -104,3 +98,4 @@ class Book {
 
 }
 
+new Book().openForm().addBookToLibrary();
