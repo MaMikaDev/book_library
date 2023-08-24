@@ -66,7 +66,7 @@ class Book {
 
   openForm() {
 
-    document.querySelector("#add-book-form").addEventListener("submit", function (event) {
+      document.querySelector("#add-book-form").addEventListener("submit", function (event) {
       event.preventDefault(); //prevents default as there is no back-end to send anything to
       alert('huh huh huuuh');
 
@@ -90,7 +90,8 @@ addNewBook.addEventListener("click", function () {
   let newBookForm = document.querySelector("#add-book-form");
   console.log(newBookForm);
   newBookForm.style.display = "block";
-  aBook = new Book().openForm()
+  aBook = new Book();
+  aBook.openForm();
 
 })
 
