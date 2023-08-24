@@ -1,5 +1,3 @@
-
-
 //initialising class Book by the use of classess
 class Book {
 
@@ -9,11 +7,8 @@ class Book {
     this.author = author;
     this.pages = pages;
     this.read = read;
+    this.myLibrary = [];
   }
-
-  myLibrary = [];
-  submitButton = document.querySelector('#submit-btn');
-  addNewBook = document.querySelector('#new-book-btn');
 
   //method to remove the book from the existing library
   removeBook(index) {
@@ -72,7 +67,7 @@ class Book {
 
   openForm() {
 
-    this.addNewBook.addEventListener("click", function () {
+    addNewBook.addEventListener("click", function () {
       let newBookForm = document.querySelector("#add-book-form");
       console.log(newBookForm);
       newBookForm.style.display = "block";
@@ -98,4 +93,8 @@ class Book {
 
 }
 
-new Book().openForm().addBookToLibrary();
+const submitButton = document.querySelector('#submit-btn');
+const addNewBook = document.querySelector('#new-book-btn');
+
+new Book();
+
