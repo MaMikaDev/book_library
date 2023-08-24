@@ -46,7 +46,7 @@ class Book {
   //toggle the book read or not
   toggleRead(index) {
     this.read = !this.read;
-    myLibrary[index].toggleRead();
+    myLibrary[index]?.toggleRead();
     aBook.render();
   }
 
