@@ -32,7 +32,7 @@ class Book {
       <p>${book.pages} pages</p>
       <p class="read-status">${book.read ? "Read" : "Not Read Yet"}</p>
       <div class="card-btns">
-      <button class="toggle-read-button" onclick="aBook.toggleRead(${i})">Toggle read</button>
+      <button class="toggle-read-button" onclick="myLibrary.toggleRead(${i})">Toggle read</button>
       <button class="remove-button" onclick="aBook.removeBook(${i})">Remove Book</button>
       </div></div>`;
       libraryBook.appendChild(bookElement);
@@ -59,7 +59,6 @@ class Book {
     let newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook); //adds book to the array
     aBook.render();
-    alert("rendered?")
 
   };
 
