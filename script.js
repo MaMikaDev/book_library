@@ -75,12 +75,11 @@ class Book {
     document.querySelector("#add-book-form").addEventListener("submit", function (event) {
       event.preventDefault(); //prevents default as there is no back-end to send anything to
       alert('huh huh huuuh')
-      this.addBookToLibrary();
-      alert("Book Added!");
-      console.log(myLibrary);
-
     })
 
+    this.addBookToLibrary();
+    alert("Book Added!");
+    console.log(myLibrary);
 
   }
 
@@ -92,7 +91,6 @@ let myLibrary = [];
 
 new Book();
 new Book().removeBook();
-new Book().addBookToLibrary();
 new Book().openForm();
 new Book().render();
 new Book().toggleRead();
