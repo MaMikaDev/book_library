@@ -39,9 +39,9 @@ class Book {
     }
   }
 
-  Book().toggleRead = function() {
-    this.read = !this.read;
-  }
+  // Book.prototype.toggleRead = function() {
+  //   this.read = !this.read;
+  // }
 
   //toggle the book read or not
   toggleRead(index) {
