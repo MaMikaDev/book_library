@@ -43,7 +43,7 @@ class Book {
   toggleRead(index) {
     this.read = !this.read;
     myLibrary[index].toggleRead();
-    render();
+    this.render();
   }
 
   //add book to the library
