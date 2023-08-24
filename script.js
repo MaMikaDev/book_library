@@ -74,12 +74,15 @@ class Book {
     })
     document.querySelector("#add-book-form").addEventListener("submit", function (event) {
       event.preventDefault(); //prevents default as there is no back-end to send anything to
-      alert('huh huh huuuh')
-    })
+      alert('huh huh huuuh');
 
-    this.addBookToLibrary();
+      this.addBookToLibrary();
     alert("Book Added!");
     console.log(myLibrary);
+
+    })
+
+    
 
   }
 
