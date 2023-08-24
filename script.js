@@ -78,7 +78,7 @@ class Book {
       });
 
       submitButton.addEventListener("click", function () {
-        this.addBookToLibrary();
+        Book().addBookToLibrary();
       })
     })
     
