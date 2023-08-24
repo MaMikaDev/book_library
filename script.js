@@ -1,5 +1,4 @@
 let myLibrary = [];
-const newBookbtn = document.querySelector("#new-book-btn");
 
 //initialising class Book by the use of classess
 class Book {
@@ -79,3 +78,5 @@ class Book {
   }
 
 }
+
+const newBookbtn = document.querySelector("#new-book-btn");
