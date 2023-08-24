@@ -12,7 +12,7 @@ class Book {
   //method to remove the book from the existing library
   removeBook(index) {
     myLibrary.splice(index, 1);
-    render();
+    this.render();
   }
 
   //method to render the existing library
