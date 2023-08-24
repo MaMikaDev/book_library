@@ -1,4 +1,7 @@
 
+
+
+
 //initialising class Book by the use of classess
 class Book {
 
@@ -7,12 +10,10 @@ class Book {
     this.author = author;
     this.pages = pages;
     this.read = read;
+    this.openForm();
   }
 
   myLibrary = [];
-  //  newBookbtn =   document.getElementById("#new-book-btn").onclick = event => {
-  //   this.openForm(event);
-  // }
 
   submitButton = document.querySelector('#submit-btn');
 
@@ -70,33 +71,25 @@ class Book {
 
   };
 
-
-  document.getElementById("#new-book-btn").onclick = event => {
-    this.openForm(event);
-  }
-
-
   openForm() {
 
-    newBookbtn.addEventListener("click", function () {
+      document.getElementById("#new-book-btn").onclick = event => {
+
       let newBookForm = document.querySelector("#add-book-form");
       newBookForm.style.display = "block";
 
       document.querySelector("#add-book-form").addEventListener("submit", function (event) {
         //prevents default as there is no back-end to send anything to
         event.preventDefault();
-        alert("HELLO?!")
+        alert("this is within openForm method, so what ")
 
-        
-      });
+      })
+    }
 
-    })
-    
-
-    
   }
 
-
 }
+
+
 
 new Book();
