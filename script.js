@@ -76,6 +76,7 @@ class Book {
         //prevents default as there is no back-end to send anything to
         event.preventDefault();
         alert("HELLO?!")
+        addBookToLibrary();
       });
 
       // submitButton.addEventListener("click", function () {
