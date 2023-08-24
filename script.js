@@ -32,12 +32,17 @@ class Book {
       <p>${book.pages} pages</p>
       <p class="read-status">${book.read ? "Read" : "Not Read Yet"}</p>
       <div class="card-btns">
-      <button class="toggle-read-button" onclick="toggleRead(${i})">Toggle read</button>
-      <button class="remove-button" onclick="removeBook(${i})">Remove Book</button>
+      <button class="toggle-read-button")">Toggle read</button>
+      <button class="remove-button")">Remove Book</button>
+
+
       </div></div>`;
       libraryBook.appendChild(bookElement);
     }
   }
+
+      // <button class="toggle-read-button" onclick="toggleRead(${i})">Toggle read</button>
+      // <button class="remove-button" onclick="removeBook(${i})">Remove Book</button>
 
   //toggle the book read or not
   toggleRead(index) {
@@ -78,6 +83,9 @@ class Book {
 
 const submitButton = document.querySelector('#submit-btn');
 const addNewBook = document.querySelector('#new-book-btn');
+const toggleButton = document.querySelector('.toggle-read-button');
+const removeButton = document.querySelector('.remove-button');
+
 let myLibrary = [];
 
 addNewBook.addEventListener("click", function () {
