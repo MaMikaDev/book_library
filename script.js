@@ -75,13 +75,13 @@ class Book {
       document.querySelector("#add-book-form").addEventListener("submit", function (event) {
         //prevents default as there is no back-end to send anything to
         event.preventDefault();
-        
+        alert("HELLO?!")
       });
 
-      submitButton.addEventListener("click", function () {
-      //  addBookToLibrary();
-      alert("HELLO?!")
-      })
+      // submitButton.addEventListener("click", function () {
+      // //  addBookToLibrary();
+      // alert("HELLO?!")
+      // })
     })
     
   }
