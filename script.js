@@ -1,6 +1,5 @@
 let myLibrary = [];
 
-Book();
 
 //initialising class Book by the use of classess
 class Book {
@@ -61,28 +60,28 @@ class Book {
 
     //query selector for a button
 
-    
-      //call the add book to library method
-      addBookToLibrary();
+  };
 
-      alert("Book Added!");
+  addBookToLibrary();
 
-      console.log(myLibrary);
-    };
+  alert("Book Added!");
 
-    submitForm(){
-      newBookbtn = document.querySelector("#new-book-btn");
+    console.log(myLibrary);
+
+  newBookbtn = document.querySelector("#new-book-btn");
  
-     newBookbtn.addEventListener("click", function () {
-       newBookForm = document.querySelector("#add-book-form");
-       console.log(newBookForm);
-       newBookForm.style.display = "block";
- 
-       document.querySelector("#add-book-form").addEventListener("submit", function (event) {
-           event.preventDefault(); //prevents default as there is no back-end to send anything to
-         });
-       }
-  )}
+    newBookbtn.addEventListener("click", function() {
+    newBookForm = document.querySelector("#add-book-form");
+    console.log(newBookForm);
+    newBookForm.style.display = "block";
 
-  
+    document.querySelector("#add-book-form").addEventListener("submit", function (event) {
+      event.preventDefault(); //prevents default as there is no back-end to send anything to
+    });
+  }
+  )
+
+
 }
+
+Book();
