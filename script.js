@@ -1,7 +1,6 @@
 //initialising class Book by the use of classess
 class Book {
 
-
   constructor(title, author, pages, read) {
     this.title = title;
     this.author = author;
@@ -96,5 +95,9 @@ class Book {
 const submitButton = document.querySelector('#submit-btn');
 const addNewBook = document.querySelector('#new-book-btn');
 
-new Book();
+new Book().removeBook();
+new Book().addBookToLibrary();
+new Book().openForm();
+new Book().render();
+new Book().toggleRead();
 
