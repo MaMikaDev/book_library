@@ -49,10 +49,10 @@ class Book {
   //add book to the library
   addBookToLibrary() {
 
-    let title = document.querySelector("#title").value;
-    let author = document.querySelector("#author").value;
-    let pages = document.querySelector("#pages").value;
-    let read = document.querySelector("#read").checked; //as it's for a radio button
+    title = document.querySelector("#title").value;
+    author = document.querySelector("#author").value;
+    pages = document.querySelector("#pages").value;
+    read = document.querySelector("#read").checked; //as it's for a radio button
 
     let newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook); //adds book to the array
@@ -90,8 +90,5 @@ const addNewBook = document.querySelector('#new-book-btn');
 let myLibrary = [];
 
 new Book();
-new Book().removeBook();
-new Book().openForm();
-new Book().render();
-new Book().toggleRead();
+
 
