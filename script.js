@@ -64,7 +64,7 @@ class Book {
   };
 
   buttonPress(){
-    newBookbtn = document.querySelector("#new-book-btn");
+    let newBookbtn = document.querySelector("#new-book-btn");
     newBookbtn.addEventListener("click", function() {
       newBookForm = document.querySelector("#add-book-form");
       console.log(newBookForm);
