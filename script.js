@@ -43,10 +43,10 @@ class Book {
   //   this.read = !this.read;
   // }
 
-  //toggle the book read or not
+  //toggle the book read or not added ? to avoid undefined error when toggling the status
   toggleRead(index) {
     this.read = !this.read;
-    myLibrary[index]?.toggleRead();
+    myLibrary[index]?.toggleRead(); 
     aBook.render();
   }
 
