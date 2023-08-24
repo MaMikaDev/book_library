@@ -12,7 +12,7 @@ class Book {
   //method to remove the book from the existing library
   removeBook(index) {
     myLibrary.splice(index, 1);
-    this.render();
+    aBook.render();
   }
 
   //method to render the existing library
@@ -43,20 +43,20 @@ class Book {
   toggleRead(index) {
     this.read = !this.read;
     myLibrary[index].toggleRead();
-    this.render();
+    aBook.render();
   }
 
   //add book to the library
   addBookToLibrary() {
 
-    title = document.querySelector("#title").value;
-    author = document.querySelector("#author").value;
-    pages = document.querySelector("#pages").value;
-    read = document.querySelector("#read").checked; //as it's for a radio button
+    this.title = document.querySelector("#title").value;
+    this.author = document.querySelector("#author").value;
+    this.pages = document.querySelector("#pages").value;
+    this.read = document.querySelector("#read").checked; //as it's for a radio button
 
     let newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook); //adds book to the array
-    this.render();
+    aBook.render();
 
     alert("Book Added!");
 
