@@ -2,7 +2,6 @@
 //initialising class Book by the use of classess
 class Book {
 
-  openForm();
 
   constructor(title, author, pages, read) {
     this.title = title;
@@ -95,6 +94,6 @@ class Book {
 
 }
 
-new Book();
+new Book().openForm();
 
 
