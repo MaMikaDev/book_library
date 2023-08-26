@@ -31,7 +31,7 @@ class Book {
       </div>
       <div class="card-body">
       <p>${book.pages} pages</p>
-      <p class="read-status">${book.read ? "Read" : "Not Read Yet"}</p>
+      <p class="read-status">${book.read ? "READ" : "UNREAD"}</p>
       <div class="card-btns">
       <button class="toggle-read-button" onclick="aBook.toggleRead(${i})">Toggle read</button>
       <button class="remove-button" onclick="aBook.removeBook(${i})">Remove Book</button>
